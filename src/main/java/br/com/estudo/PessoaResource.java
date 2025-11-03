@@ -44,8 +44,9 @@ public class PessoaResource {
     }
 
     @DELETE
+    @Path("{id}")
     @Transactional
-    public void deletePessoa(int id) {
+    public void deletePessoa(@PathParam("id") Long id) {
         Pessoa.deleteById(id);
     }
 
